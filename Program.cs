@@ -7,3 +7,5 @@ Console.WriteLine("antiguedad: " + nuevoEmpleado.Antiguedad());
 Console.WriteLine("edad: " + nuevoEmpleado.Edad());
 
 Console.WriteLine("años para jubilarse: " + nuevoEmpleado.AñosParaJubilarse());
+
+Console.WriteLine("salario: " + nuevoEmpleado.Salario());

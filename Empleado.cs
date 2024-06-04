@@ -69,4 +69,25 @@ public class Empleado
         return 65 - this.Edad();
     }
 
+    public double Salario() {
+
+        double adicional = 0;
+        if (this.Antiguedad() > 20)
+        {
+            adicional += sueldoBasico * 25 / 100;
+        } else
+        {
+            adicional += sueldoBasico * this.Antiguedad() / 100;
+        }
+        if (this.cargo == Cargos.Ingeniero || this.cargo == Cargos.Especialista)
+        {
+            adicional *= 1.5;
+        }
+        if (this.estadoCivil == 'c')
+        {
+            adicional += 150000;
+        }
+        return sueldoBasico + adicional;
+    }
+
 }
