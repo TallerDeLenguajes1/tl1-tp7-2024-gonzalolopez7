@@ -13,3 +13,25 @@ foreach (var empleado in empleados)
     montoTotal += empleado.Salario();
 }
 
+mostrarMaxProxAJubilarse(empleados);
+
+
+
+
+void mostrarMaxProxAJubilarse(Empleado[] empleados) {
+
+    Empleado empleadoMasProxAJubilarse = empleados[0];
+    foreach (var empleado in empleados)
+    {
+        if (empleado.AñosParaJubilarse() <= empleadoMasProxAJubilarse.AñosParaJubilarse())
+        {
+            empleadoMasProxAJubilarse = empleado;
+        }
+    }
+
+    System.Console.WriteLine("empleado mas proximo a jubilarse: ");
+    System.Console.WriteLine("edad: " + empleadoMasProxAJubilarse.Edad());
+    System.Console.WriteLine("antiguedad: " + empleadoMasProxAJubilarse.Antiguedad());
+    System.Console.WriteLine("años para jubilarse: " + empleadoMasProxAJubilarse.AñosParaJubilarse());
+    System.Console.WriteLine("salario: " + empleadoMasProxAJubilarse.Salario());
+}
